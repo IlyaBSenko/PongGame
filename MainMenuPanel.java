@@ -20,7 +20,7 @@ public class MainMenuPanel extends JPanel {
         gbc.gridy = 0;
         this.add(title, gbc);
 
-        // add best to three below the title 
+        // best to three below the title 
         JLabel bestToThreeLabel = new JLabel("Best to Three!");
         bestToThreeLabel.setFont(new Font("Consolas", Font.PLAIN, 24));
         bestToThreeLabel.setForeground(Color.WHITE);

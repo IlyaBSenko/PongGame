@@ -5,9 +5,9 @@ public class Paddle {
     // Need position, speed, dimensions, movement method
 
     private int x, y;
-    private int width, height;   // the dimensions
-    private int speed;           // the speed
-    private int panelHeight;     // for boundary checking
+    private int width, height;   
+    private int speed;           
+    private int panelHeight;     
 
     public Paddle(int x, int y, int width, int height, int speed, int panelHeight) {
         this.x = x;

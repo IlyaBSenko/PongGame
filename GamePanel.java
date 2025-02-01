@@ -232,28 +232,28 @@ public class GamePanel extends JPanel implements Runnable, KeyListener {
         }
     }
 
-    // Handle all drawing here
+    // all the drawing
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // Draw center dividing line
+        // center dividing line
         g.setColor(Color.WHITE);
         g.drawLine(PANEL_WIDTH / 2, 0, PANEL_WIDTH / 2, PANEL_HEIGHT);
 
-        // Draw left paddle
+        // left paddle
         g.fillRect(leftPaddle.getX(), leftPaddle.getY(),
                    leftPaddle.getWidth(), leftPaddle.getHeight());
         
-        // Draw right paddle
+        // right paddle
         g.fillRect(rightPaddle.getX(), rightPaddle.getY(),
                    rightPaddle.getWidth(), rightPaddle.getHeight());
 
-        // Draw ball
+        // ball
         g.fillOval(ball.getX(), ball.getY(), 
                    ball.getDiameter(), ball.getDiameter());
 
-        // Draw scores
+        // scores
         g.setFont(new Font("Consolas", Font.BOLD, 36));
         String leftScoreStr = String.valueOf(score.getLeftScore());
         String rightScoreStr = String.valueOf(score.getRightScore());
