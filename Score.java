@@ -1,28 +1,30 @@
 public class Score {
-    private int player1score;
-    private int player2score;
+    private int leftScore;
+    private int rightScore;
 
     public Score() {
-        this.player1score = 0;
-        this.player2score = 0;
+        leftScore = 0;
+        rightScore = 0;
     }
 
     public void incrementLeft() {
-        player1score++;
+        leftScore++;
     }
 
     public void incrementRight() {
-        player2score++;
+        rightScore++;
     }
 
     public int getLeftScore() {
-        return player1score;
+        return leftScore;
     }
 
     public int getRightScore() {
-        return player2score;
+        return rightScore;
     }
 
-    
-    
+    public void reset() {
+        leftScore = 0;
+        rightScore = 0;
+    }
 }

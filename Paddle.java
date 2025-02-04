@@ -1,13 +1,10 @@
 import java.awt.Rectangle;
 
 public class Paddle {
-    
-    // Need position, speed, dimensions, movement method
-
     private int x, y;
-    private int width, height;   
-    private int speed;           
-    private int panelHeight;     
+    private int width, height;
+    private int speed;
+    private int panelHeight;
 
     public Paddle(int x, int y, int width, int height, int speed, int panelHeight) {
         this.x = x;
@@ -19,47 +16,22 @@ public class Paddle {
     }
 
     public void moveUp() {
-        if (y - speed >= 0) {
-            y -= speed;
-        } else {
-            y = 0;
-        }
-        
+        y = Math.max(0, y - speed);
     }
 
     public void moveDown() {
-        if (y + height + speed <= panelHeight) {
-            y += speed;
-        } else {
-            y = panelHeight - height;
-        }
+        y = Math.min(panelHeight - height, y + speed);
     }
 
     public Rectangle getBounds() {
         return new Rectangle(x, y, width, height);
     }
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public int getSpeed() {
-        return speed;
-    }
+    // Getters and setters
+    public int getX() { return x; }
+    public int getY() { return y; }
+    public int getWidth() { return width; }
+    public int getHeight() { return height; }
+    public int getSpeed() { return speed; }
+    public void setSpeed(int speed) { this.speed = speed; }
 }
